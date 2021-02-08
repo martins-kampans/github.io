@@ -28,6 +28,8 @@ function validacija(algaBruto){
         netoAutput.innerHTML = "0 Euro";
     }
 }
+//ko lai uzraksta funkciju, kas ierobežotu naudas par apgādājumiem pārsvaru pār bruto naudu
+//pie 5 bērniem atvieglinājumi par agādājamiem pārsniedz bruto algu.
 function apadajamieValid(brutoAlga, bernuSkaits){  
     var avieglinParApgadajamiem = bernuSkaits * 250;
     // while(brutoAlga > bernuSkaits){
