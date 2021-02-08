@@ -17,6 +17,8 @@ function aprekins(){
     var apliekSum = bruto - socNod - apgadajamoSumma - neapliekMin;
     var IIN = apliekSum * 0.20
     netoAutput.innerHTML = Math.round(bruto - socNod - IIN) + " Eur";
+    //Validācija izvietota aprekina funkcijas sākumā pie nepareizas algas ievades 
+    //neaptur nepareizu neto algas izvadi
     validacija(bruto);
 };
 function validacija(algaBruto){
