@@ -21,6 +21,7 @@ function aprekins(){
     //neaptur nepareizu neto algas izvadi
     validacija(bruto);
 };
+//vai validācija, kas automātiski neļauj ievadīt ne-skaitli nav īsāks un labāks risinājums?
 function validacija(algaBruto){
     if(isNaN(algaBruto)){
         netoAutput.innerHTML = "Ievadi pareizi algas apjomu";
