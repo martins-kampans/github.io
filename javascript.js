@@ -4,8 +4,22 @@ var netoAutput = document.querySelector(".netoAlga");
 var button = document.querySelector("button");
 var apgadajamie = document.querySelector(".bernuSkaits");
 
-button.addEventListener('click', aprekins);
+button.addEventListener('click', validacija);
 
+function validacija(){
+    var algaBruto = brutoInput.value;
+
+    // if(isNaN(algaBruto)){
+    if(isNaN(algaBruto) || algaBruto <= 0){
+        netoAutput.innerHTML = "Ievadi pareizi algas apjomu";
+    }else if(algaBruto == ""){
+        netoAutput.innerHTML = "Algas ievades lauks tukšs";
+    }else if(algaBruto == 0){
+        netoAutput.innerHTML = "0 Euro";
+    }else{
+        aprekins();
+    }
+}
 
 function aprekins(){
     var bruto = brutoInput.value;
@@ -17,20 +31,8 @@ function aprekins(){
     var apliekSum = bruto - socNod - apgadajamoSumma - neapliekMin;
     var IIN = apliekSum * 0.20
     netoAutput.innerHTML = Math.round(bruto - socNod - IIN) + " Eur";
-    //Validācija izvietota aprekina funkcijas sākumā pie nepareizas algas ievades 
-    //neaptur nepareizu neto algas izvadi
-    validacija(bruto);
 };
-//vai validācija, kas automātiski neļauj ievadīt ne-skaitli nav īsāks un labāks risinājums?
-function validacija(algaBruto){
-    if(isNaN(algaBruto)){
-        netoAutput.innerHTML = "Ievadi pareizi algas apjomu";
-    }else if(algaBruto == ""){
-        netoAutput.innerHTML = "Algas ievades lauks tukšs";
-    }else if(algaBruto == 0){
-        netoAutput.innerHTML = "0 Euro";
-    }
-}
+
 //ko lai uzraksta funkciju, kas ierobežotu naudas par apgādājumiem pārsvaru pār bruto naudu
 //pie 5 bērniem atvieglinājumi par agādājamiem pārsniedz bruto algu.
 function apadajamieValid(brutoAlga, bernuSkaits){  
