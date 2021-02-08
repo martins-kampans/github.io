@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algas Kalkulators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Algas kalkulators</h1>
+        <form action="#">
+            <div class="input-wrap">
+                <input type="text" placeholder="Alga" class="brutoAlga">
+            </div>
+            <label for="">Bērnu skaits</label>
+            <div class="input-wrap">  
+                <input type="number" class="bernuSkaits" min="0" step="1" max="10">
+            </div>
+            <h2>Alga uz rokas</h2>
+            <h3 class="netoAlga"></h3>
+            <div class="input-wrap">
+                <button type="submit">Aprēķināt</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
+
